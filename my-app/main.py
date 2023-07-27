@@ -11,10 +11,10 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self): # this method gets triggered when you pass it to HTTPServer
         self.send_response(200)
         # HTTP header
-        self.send_header("Content-type", "text/html")
+        self.send_header("Content-type", "text/plain")
         self.end_headers
         #---------
-        message = "<html><body><h1>Hello World! 3</h1><body><html>"
+        message = "<html><body><h1>Hello World! 4</h1><body><html>"
         self.wfile.write(bytes(message, 'utf-8'))
     
 server = HTTPServer((HOST, PORT), Handler)
