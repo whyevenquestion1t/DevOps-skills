@@ -2,9 +2,9 @@ from time import sleep
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 # HOST = "0.0.0.0" allows our server to accept connections from any IP address
-# other option is to set HOST to "localhost" or "127.0.0.1" - in that case it will only listen to the local machine 
-# and no other machine on the network will be able to connect to our server 
-HOST = "0.0.0.0" 
+# other option is to set HOST to "localhost" or "127.0.0.1" - in that case it will only listen to the local machine
+# and no other machine on the network will be able to connect to our server
+HOST = "0.0.0.0"
 PORT = 80
 
 class Handler(BaseHTTPRequestHandler):

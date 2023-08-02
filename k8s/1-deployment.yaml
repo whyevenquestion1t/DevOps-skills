@@ -21,4 +21,5 @@ spec:
             memory: "128Mi"
             cpu: "250m"
         ports:
-        - containerPort: 80
+        - name: http
+          containerPort: 80
