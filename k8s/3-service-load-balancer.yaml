@@ -1,4 +1,7 @@
 ---
+# using service type LoadBalancer is much more common rather than opening up a port on a Node
+# but you need to make sure that the cloud provider where you deploy your K8s support it 
+---
 apiVersion: v1
 kind: Service
 metadata:

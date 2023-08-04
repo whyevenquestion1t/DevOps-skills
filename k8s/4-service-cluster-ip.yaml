@@ -1,0 +1,16 @@
+# The most common approach to expose web services is to use Ingress
+# First, we need to create a cluster IP service 
+# To actually use Ingress, you must deploy Ingress controller (with Helm Charts) before you create that object 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-server
+  namespace: dev
+spec:
+  type: ClusterIP
+  selector:
+    app: python-server
+  ports:
+    - port: 80
+      targetPort: http

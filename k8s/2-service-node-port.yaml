@@ -1,3 +1,7 @@
+---
+# you can select a specific port on the node and route traffic in that way
+# make sure you use the same labels that you have on 1-deployemnt.yaml file to select Pods
+---
 apiVersion: v1
 kind: Service
 metadata:

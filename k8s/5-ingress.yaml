@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: 
+  name: python-server
+  namespace: dev
+  # annotations: 
+  #   k8s.io/ingress-nginx: external-nginx
+spec: 
+  ingressClassName: external-nginx
+  rules:
+    - host: localhost
+      http: 
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: python-server
+                port: 
+                  number: 80
+              
